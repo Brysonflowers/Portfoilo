@@ -18,7 +18,7 @@
             scroll-behavior: smooth;
         }
 
-        .section1 {
+        .section2 {
             height: 100vh;
             display: flex;
             align-items: center;
@@ -32,7 +32,7 @@
             /* A lighter line for separation */
         }
 
-        .section2 {
+        .section1 {
             height: 300vh;
             display: flex;
             align-items: center;
@@ -118,6 +118,13 @@
             display: flex;
         }
 
+        .flex-container1 {
+            display: flex;
+            width: 100%;
+        }
+
+
+
         .container {
             display: flex;
             /* Enables flexbox for the container */
@@ -129,7 +136,7 @@
             flex: 1;
             /* Makes columns take up equal available space */
             padding: 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
         }
 
         .grid-container {
@@ -143,6 +150,61 @@
         .grid-item {
             padding: 15px;
             border: 1px solid #ccc;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* Creates 4 columns of equal width */
+            gap: 15px;
+            /* Adds space between grid items */
+            justify-items: center;
+            /* Centers items within their grid cell */
+            align-items: center;
+            /* Centers items vertically */
+            padding: 20px;
+        }
+
+        .image-grid img {
+            width: 100px;
+            /* Sets a consistent width for all images */
+            height: auto;
+            /* Maintains the image's aspect ratio */
+        }
+
+        /* Optional: For smaller screens, adjust the grid to fewer columns */
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Creates 2 columns on smaller screens */
+            }
+        }
+
+        .flex-container22 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .flex-container img {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column22 {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     </style>
 </head>
@@ -165,8 +227,8 @@
 
 
         <nav class="sidebar-nav text-center">
-            <a href="#section2">About me</a>
-            <a href="#section3">Skills</a>
+            <a href="#section1">About me</a>
+            <a href="#section2">Skills</a>
             <a href="#section3">Projects</a>
             <a href="#section4">My Contacts</a>
 
@@ -177,7 +239,7 @@
 
     <main class="main-content ml-[250px] w-[calc(100%-250px)]">
 
-        <section id="section2" class="section bg-section-1">
+        <section id="section1" class="section bg-section-1">
             <h2 class="text-4xl md:text-6xl font-bold mb-4">About me</h2>
             <div>
                 <p class="text-lg md:text-xl font-light">
@@ -194,7 +256,7 @@
         </section>
 
 
-        <section id="section3" class="section bg-section-2">
+        <section id="section2" class="section bg-section-2">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-6xl md:text-6xl font-bold mb-4">Skills</h2>
                 <p>&nbsp;&nbsp;&nbsp;</p>
@@ -217,24 +279,24 @@
                             **JavaScript**, **React**, **Java**, **Django**, and **Spring**.</li> -->
                     <div class="grid-container">
                         <div>
-                        <strong>Python</strong>
-                        <img src="images/logo_pic/python.png" alt="Python img" width="50" height="50">
+                            <strong>Python</strong>
+                            <img src="images/logo_pic/python.png" alt="Python img" width="50" height="50">
                         </div>
                         <!-- <p>[3 projects] </p>
                         <p>50+ hours</p> -->
 
                         <div>
-                        <strong>JavaScript</strong>
-                        <img src="images/logo_pic/javascript.png" alt="javascript img" width="50" height="50">
+                            <strong>JavaScript</strong>
+                            <img src="images/logo_pic/javascript.png" alt="javascript img" width="50" height="50">
                         </div>
 
 
                         <!-- <p>[1 projects] </p>
                         <p>10+ hours</p> -->
                         <div>
-                        <strong>Rust</strong>
-                        <img src="images/logo_pic/rust.png" alt="Rust img" width="50" height="50">
-                        <!-- <p>[3 projects] </p>
+                            <strong>Rust</strong>
+                            <img src="images/logo_pic/rust.png" alt="Rust img" width="50" height="50">
+                            <!-- <p>[3 projects] </p>
                         <p>100+ hours</p> -->
                         </div>
                     </div>
@@ -250,8 +312,72 @@
                 </div>
             </div>
         </section>
+
+
+        <section id="section3" class="section bg-section-1">
+
+
+        </section>
+
+        <section id="section4" class="section bg-section-2">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">
+                    <center>Contacts</center>
+                </h2>
+            </div>
+
+            <!-- <div class="flex-container1">
+                <center>
+                    <img src="images/logo_pic/Contacts/google-gmail-logo-symbol-design-illustration-with-black-background-free-vector.jpg"
+                        alt="gmail img" width="100" height="100">
+                    <img src="images/logo_pic/Contacts/linkedin.jpg" alt="LinkedIn img" width="100" height="100">
+                    <img src="images/logo_pic/Contacts/Remume.jpg" alt="Resume img" width="100" height="100">
+                    <img src="images/logo_pic/Contacts/X_logo.jpg" alt="X img" width="100" height="100">
+                    <img src="images/logo_pic/Contacts/Facebook.png" alt="Facebook img" width="100" height="100">
+                    <img src="images/logo_pic/Contacts/Threads.webp" alt="Threads img" width="100" height="100">
+                    <img src="images/logo_pic/Contacts/instagram.jpg" alt="instagram img" width="100" height="100">
+                </center>
+            </div> -->
+            <div class="flex-container22">
+                <div class="column22">
+                    <!-- <img src="images/logo_pic/Contacts/google-gmail-logo-symbol-design-illustration-with-black-background-free-vector.jpg"alt="gmail img" width="100" height="100"> -->
+                </div>
+                <div class="column22">
+                    <!-- <img src="images/logo_pic/Contacts/linkedin.jpg" alt="LinkedIn img" width="100" height="100"> -->
+                </div>
+                <div class="column22">
+                    <!-- <img src="images/logo_pic/Contacts/Remume.jpg" alt="Resume img" width="100" height="100"> -->
+                </div>
+                <div class="column22">
+                    <!-- <img src="images/logo_pic/Contacts/X_logo.jpg" alt="X img" width="100" height="100"> -->
+                </div>
+                <div class="column22">
+                    <!-- <img src="images/logo_pic/Contacts/Facebook.png" alt="Facebook img" width="100" height="100"> -->
+                </div>
+                <div class="column22">
+                    <!-- <img src="images/logo_pic/Contacts/Threads.webp" alt="Threads img" width="100" height="100"> -->
+                </div>
+                <div class="column22">
+                    <!-- <img src="images/logo_pic/Contacts/instagram.jpg" alt="instagram img" width="100" height="100"> -->
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="column"><img src="images/logo_pic/Contacts/google-gmail-logo-symbol-design-illustration-with-black-background-free-vector.jpg"alt="gmail img" width="100" height="100"></div>
+                <div class="column"><img src="images/logo_pic/Contacts/linkedin.jpg" alt="LinkedIn img" width="100" height="100"></div>
+                <div class="column"><img src="images/logo_pic/Contacts/Remume.jpg" alt="Resume img" width="100" height="100"></div>
+                <div class="column"><img src="images/logo_pic/Contacts/Facebook.png" alt="Facebook img" width="100" height="100"></div>
+                <div class="column"><img src="images/logo_pic/Contacts/X_logo.jpg" alt="X img" width="100" height="100"></div>
+                <div class="column"><img src="images/logo_pic/Contacts/Threads.webp" alt="Threads img" width="100" height="100"></div>
+                <div class="column"><img src="images/logo_pic/Contacts/instagram.jpg" alt="instagram img" width="100" height="100"></div>
+
+            </div>
+
+
+
     </main>
 </body>
 
 <!-- test to see if this shows up -->
+
 </html>
