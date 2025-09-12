@@ -151,23 +151,71 @@
 
 		/* Mobile-first CSS */
 		@media (max-width: 768px) {
-			.container {
-				flex-direction: column;
-				align-items: center;
-			}
+			/* Mobile-first CSS */
+			@media (max-width: 768px) {
+				.container {
+					/* This will remove the flex behavior and stack elements vertically by default */
+					display: block;
+				}
 
-			.column {
-				flex: none;
-				width: 100%;
-				margin-bottom: 15px;
-			}
+				.column {
+					flex: none;
+					width: 100%;
+					margin-bottom: 15px;
+				}
 
-			.grid-container {
-				grid-template-columns: 1fr;
+				.grid-container {
+					grid-template-columns: 1fr;
+					/* The grid will now have a single column */
+					display: block;
+				}
+
+				/* Adjusting font sizes with viewport units */
+				.p1 {
+					font-size: 5vw;
+					/* Example of a relative font size */
+				}
 			}
 		}
 
 		@media (max-width: 430px) {
+			/* .sidebar {
+				/* display: none; */
+			/* } */ */
+
+			.main-content {
+				margin-left: 0;
+				width: 100%;
+			}
+
+			.p1 {
+				font-family: "Times New Roman", Times, serif;
+				font-size: 5vw;
+				/* This will make the font size a percentage of the viewport width */
+			}
+
+			.paragraph-container {
+				border: 20px solid #030303;
+				padding: 20px;
+				margin: 1px;
+				background-color: #0D131B;
+				border-radius: 8px;
+			}
+
+			.container,
+			.grid-container {
+				display: block;
+				/* Changes the display to block, effectively removing the flex/grid behavior */
+			}
+
+			.column {
+				width: 100%;
+				/* Ensures each column takes up the full width */
+			}
+		}
+		
+
+		/* @media (max-width: 430px) {
 			.sidebar {
 				display: none;
 			}
@@ -176,11 +224,13 @@
 				margin-left: 0;
 				width: 100%;
 			}
+
 			.p1 {
-			font-family: "Times New Roman", Times, serif;
-			font-size: 2.7rem;
-			/* 1 * 16px = 16px */
-		}
+				font-family: "Times New Roman", Times, serif;
+				font-size: 2.7rem;
+				/* 1 * 16px = 16px */
+		/* }
+
 		.paragraph-container {
 			border: 20px solid #030303;
 			padding: 20px;
@@ -188,7 +238,10 @@
 			background-color: #0D131B;
 			border-radius: 8px;
 		}
-		}
+
+		*/
+		/* } */
+		*/
 	</style>
 </head>
 
@@ -323,7 +376,9 @@
 		<section id="projects" class="section full-section bg-section-2">
 			<div class="max-w-4xl mx-auto">
 				<div class="paragraph-container">
-					<h2 class="text-6xl md:text-6xl font-bold mb-4">Projects</h2>
+					<center>
+						<h2 class="text-6xl md:text-6xl font-bold mb-4">Projects</h2>
+					</center>
 				</div>
 			</div>
 			<center>
