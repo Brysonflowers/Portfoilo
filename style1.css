@@ -1,0 +1,233 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #101827;
+    color: #E0E7E9;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #30394A;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.bg-section-1 {
+    background-color: #1A2333;
+}
+
+.bg-section-2 {
+    background-color: #252E40;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0D131B;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.sidebar-nav a {
+    padding: 0.75rem 0;
+    margin-bottom: 0.5rem;
+    color: #E0E7E9;
+    transition: color 0.3s ease;
+    display: block;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 15px;
+    border: 3px solid #000000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.paragraph-container {
+    border: 20px solid #030303;
+    padding: 20px;
+    margin: 10px;
+    background-color: #0D131B;
+    border-radius: 8px;
+}
+
+.paragraph-container p {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.paragraph-container h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #9cd4e4;
+    margin-bottom: 1rem;
+}
+
+.paragraph-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.paragraph-container li {
+    margin-bottom: 0.5rem;
+}
+
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    /* 1 * 16px = 16px */
+}
+
+.p2 {
+    /* color: #9cd4e4; */
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    /* 1 * 16px = 16px */
+}
+
+.full-section {
+    min-height: 100vh;
+    padding: 1rem 0;
+    align-items: flex-start;
+}
+
+.your-class-name {
+    font-size: 1.875rem;
+    /* This is the equivalent of Tailwind's text-3xl */
+    font-weight: 700;
+    /* This corresponds to font-bold */
+    margin-bottom: 2rem;
+    /* This is the equivalent of mb-8 (1 unit = 0.25rem) */
+    color: #fff;
+    /* This corresponds to text-white */
+}
+
+/* Mobile-first CSS */
+@media (max-width: 768px) {
+    /* Mobile-first CSS */
+    @media (max-width: 768px) {
+        .container {
+            /* This will remove the flex behavior and stack elements vertically by default */
+            display: block;
+        }
+
+        .column {
+            flex: none;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr;
+            /* The grid will now have a single column */
+            display: block;
+        }
+
+        /* Adjusting font sizes with viewport units */
+        .p1 {
+            font-size: 5vw;
+            /* Example of a relative font size */
+        }
+    }
+}
+
+@media (max-width: 430px) {
+
+    /* .sidebar {
+				/* display: none; */
+    /* } */
+    */ .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .p1 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 5vw;
+        /* This will make the font size a percentage of the viewport width */
+    }
+
+    .paragraph-container {
+        border: 20px solid #030303;
+        padding: 20px;
+        margin: 1px;
+        background-color: #0D131B;
+        border-radius: 8px;
+    }
+
+    .container,
+    .grid-container {
+        display: block;
+        /* Changes the display to block, effectively removing the flex/grid behavior */
+    }
+
+    .column {
+        width: 100%;
+        /* Ensures each column takes up the full width */
+    }
+}
+
+
+/* @media (max-width: 430px) {
+			.sidebar {
+				display: none;
+			}
+
+			.main-content {
+				margin-left: 0;
+				width: 100%;
+			}
+
+			.p1 {
+				font-family: "Times New Roman", Times, serif;
+				font-size: 2.7rem;
+				/* 1 * 16px = 16px */
+/* }
+
+		.paragraph-container {
+			border: 20px solid #030303;
+			padding: 20px;
+			margin: 1px;
+			background-color: #0D131B;
+			border-radius: 8px;
+		}
+
+		*/
+/* } */
