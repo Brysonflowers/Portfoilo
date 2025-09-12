@@ -14,6 +14,7 @@
 			color: #E0E7E9;
 			line-height: 1.6;
 			scroll-behavior: smooth;
+
 		}
 
 		.section {
@@ -120,12 +121,32 @@
 
 		.p1 {
 			font-family: "Times New Roman", Times, serif;
+			font-size: 2rem;
+			/* 1 * 16px = 16px */
+		}
+
+		.p2 {
+			/* color: #9cd4e4; */
+			font-family: "Times New Roman", Times, serif;
+			font-size: 1.5rem;
+			/* 1 * 16px = 16px */
 		}
 
 		.full-section {
 			min-height: 100vh;
 			padding: 1rem 0;
 			align-items: flex-start;
+		}
+
+		.your-class-name {
+			font-size: 1.875rem;
+			/* This is the equivalent of Tailwind's text-3xl */
+			font-weight: 700;
+			/* This corresponds to font-bold */
+			margin-bottom: 2rem;
+			/* This is the equivalent of mb-8 (1 unit = 0.25rem) */
+			color: #fff;
+			/* This corresponds to text-white */
 		}
 
 		/* Mobile-first CSS */
@@ -155,6 +176,18 @@
 				margin-left: 0;
 				width: 100%;
 			}
+			.p1 {
+			font-family: "Times New Roman", Times, serif;
+			font-size: 2.7rem;
+			/* 1 * 16px = 16px */
+		}
+		.paragraph-container {
+			border: 20px solid #030303;
+			padding: 20px;
+			margin: 1px;
+			background-color: #0D131B;
+			border-radius: 8px;
+		}
 		}
 	</style>
 </head>
@@ -178,7 +211,7 @@
 
 		<section id="about-me" class="section full-section bg-section-2">
 			<div>
-				<h2 class="text-4xl md:text-6xl font-bold mb-4">About me</h2>
+				<h2 class="text-4xl md:text-6xl font-bold mb-4 "> <b style="color: #9cd4e4; ">About me</b></h2>
 				<div class="paragraph-container">
 					<p class="p1">
 						Ever since I was young, I've been fascinated by how technology can be used to solve real-world
@@ -211,19 +244,20 @@
 							height="100"></div>
 					<div class="column"><img src="images/logo_pic/Contacts/Threads.webp" alt="Threads img" width="100"
 							height="100"></div>
-					<div class="column"><img src="images/logo_pic/Contacts/instagram.jpg" alt="instagram img"
-							width="100" height="100"></div>
+					<!-- <div class="column"><img src="images/logo_pic/Contacts/instagram.jpg" alt="instagram img"
+							width="100" height="100"></div> -->
 				</div>
 			</div>
 		</section>
 
 		<section id="skills" class="section full-section bg-section-1">
 			<div class="max-w-4xl mx-auto">
-				<h2 class="text-6xl md:text-6xl font-bold mb-4">My Skills</h2>
+				<h2 class="text-6xl md:text-6xl font-bold mb-4"><b style="color: #9cd4e4; ">My Skills</b></h2>
 				<div class="grid-container">
 					<div class="paragraph-container">
 						<!-- <strong>Python</strong> -->
-						<img src="images/pic/61c2e48c31c35e3ee6ca0daf_616682ef1068e385b0db66f0_python-django.png" alt="Python img" width="600" height="600">
+						<img src="images/pic/61c2e48c31c35e3ee6ca0daf_616682ef1068e385b0db66f0_python-django.png"
+							alt="Python img" width="600" height="600">
 					</div>
 					<!-- <p>[3 projects] </p>
                         <p>50+ hours</p> -->
@@ -266,19 +300,19 @@
 
 				</div>
 				<div class="paragraph-container">
-					<h3 style="color: #9cd4e4;">My Technical Skills</h3>
-					<p>
-						I have a solid foundation in programming, starting with **Python** to learn core concepts
+					<h3 style="color: #9cd4e4; ">My Technical Skills</h3>
+					<p class="p2">
+						I have a solid foundation in programming, starting with Python to learn core concepts
 						like
 						function design, data types, and algorithms. I then expanded my knowledge to front-end
-						development using **HTML, CSS, and JavaScript**, where I gained hands-on experience with
+						development using HTML, CSS, and JavaScript, where I gained hands-on experience with
 						responsive layouts and DOM manipulation. My back-end skills include building robust
 						applications
-						with **Django, Java, and Spring**, where I focused on user management, database integration
+						with Django, Java, and Spring**, where I focused on user management, database integration
 						with
 						PostgreSQL, and creating REST APIs. My experience also includes version control using
-						**GitHub**
-						and building games with the **Godot** engine.
+						GitHub
+						and building games with the Godot engine.
 					</p>
 				</div>
 

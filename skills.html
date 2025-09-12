@@ -8,6 +8,10 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<style>
+		html {
+			font-size: 16px;
+		}
+
 		body {
 			font-family: 'Inter', sans-serif;
 			background-color: #101827;
@@ -94,6 +98,10 @@
 			margin: 10px;
 			background-color: #0D131B;
 			border-radius: 8px;
+			/* Added for readability on larger screens */
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.paragraph-container p {
@@ -122,16 +130,39 @@
 			font-family: "Times New Roman", Times, serif;
 		}
 
-		@media (max-width: 430px) {
-			.sidebar {
-				display: none;
-			}
-		}
-
 		.full-section {
 			min-height: 100vh;
 			padding: 1rem 0;
 			align-items: flex-start;
+		}
+
+		/* Mobile-first CSS */
+		@media (max-width: 768px) {
+			.container {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.column {
+				flex: none;
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
+			.grid-container {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media (max-width: 430px) {
+			.sidebar {
+				display: none;
+			}
+
+			.main-content {
+				margin-left: 0;
+				width: 100%;
+			}
 		}
 	</style>
 </head>
@@ -182,15 +213,15 @@
 							height="100"></div>
 					<div class="column"><img src="images/logo_pic/Contacts/Remume.jpg" alt="Resume img" width="100"
 							height="100"></div>
+				</div>
+				<div class="container">
 					<div class="column"><img src="images/logo_pic/Contacts/Facebook.png" alt="Facebook img" width="100"
 							height="100"></div>
 					<div class="column"><img src="images/logo_pic/Contacts/X_logo.jpg" alt="X img" width="100"
 							height="100"></div>
 					<div class="column"><img src="images/logo_pic/Contacts/Threads.webp" alt="Threads img" width="100"
 							height="100"></div>
-					<div class="column"><img src="images/logo_pic/Contacts/instagram.jpg" alt="instagram img"
-							width="100" height="100"></div>
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -199,29 +230,21 @@
 				<h2 class="text-6xl md:text-6xl font-bold mb-4">My Skills</h2>
 				<div class="grid-container">
 					<div class="paragraph-container">
-						<!-- <strong>Python</strong> -->
-						<img src="images/pic/python-django.png" alt="Python img" width="600" height="600">
+						<img src="images/pic/61c2e48c31c35e3ee6ca0daf_616682ef1068e385b0db66f0_python-django.png"
+							alt="Python img" width="600" height="600">
 					</div>
-					<!-- <p>[3 projects] </p>
-                        <p>50+ hours</p> -->
-
 					<div class="paragraph-container">
-						<!-- <strong>JavaScript</strong> -->
-						<img src="images/logo_pic/download (1).png" alt="javascript img" width="300" height="300">
+						<img src="images/pic/download (1).png" alt="javascript img" width="300" height="300">
 
 					</div>
 
 
-					<!-- <p>[1 projects] </p>
-                        <p>10+ hours</p> -->
 					<div class="paragraph-container">
 						<center></center>
 						<img src="images/pic/Rust_programming_language_black_logo.svg_.jpg" alt="Rust img" width="600"
 							height="600">
 						</center>
-						<!-- <p>[3 projects] </p>
-                        <p>100+ hours</p> -->
-					</div>
+						</div>
 
 					<div class="paragraph-container">
 						<strong></strong>
